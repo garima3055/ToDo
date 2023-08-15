@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f29e0e;
+  margin: 0;
+  padding: 0;
+}
+
+.heading {
+  text-align: center;
+  margin-top: 20px;
+  color: #8ec102;
+  font-size: 28px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: #a728f0; /* Heading background color */
+  padding: 10px 0;
+}
+
+#todo-app {
+  max-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  gap: 20px;
+  background-color: #f29e0e; /* Box background color */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#task-entry,
+#task-list {
+  flex: 1;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#task-entry {
+  background-color: #bf6bf09c; /* Box background color */
+}
+
+#task-list {
+  background-color: #bf6bf09c; /* Box background color */
+}
+
+.heading:hover {
+  color: #bbff00; /* Hover color */
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+  transform: scale(1.2);
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+h2 {
+  color: #555;
+}
+
+#task-entry h2,
+#task-list h2 {
+  color: #1f1e1e;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#task-entry h2 {
+  border-bottom: 2px solid #ff6347;
+  padding-bottom: 5px;
+}
+
+#task-list h2 {
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+li:hover {
+  background-color: #f5f5f5;
+}
+
+li.completed {
+  background-color: #f0f0f0;
+  text-decoration: line-through;
+}
+
+button {
+  background-color: #ff5537;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+}
+
+button#addTask {
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #e74c3c;
+  transform: scale(1.05);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  background-color: #36ea51;
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.popup.show {
+  opacity: 1;
+}
